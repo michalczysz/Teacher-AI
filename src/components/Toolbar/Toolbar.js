@@ -1,5 +1,5 @@
 import styles from "@/styles/Toolbar.module.css";
-import Microphone from "src/components/toolbar/Microphone";
+import Microphone from "src/components/Toolbar/Microphone";
 import Dropdown from "src/components/Dropdown/Dropdown";
 
 const Toolbar = ({
