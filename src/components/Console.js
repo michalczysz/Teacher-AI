@@ -464,6 +464,7 @@ function Console({
             if (message.role === "system") {
               return null;
             } else {
+              console.log(message.audio)
               return (
                 <div className={styles.Message} key={index}>
                   <span className={styles.Text}>
@@ -497,7 +498,7 @@ function Console({
                       >
                         <source
                           src={message.audio.audioDataURI}
-                          type={message.audio.ContentType}
+                          type="audio/mpeg"
                         />
                       </audio>
                     </>
