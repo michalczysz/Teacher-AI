@@ -24,7 +24,7 @@ Ensure that you have the following prerequisites installed and set up on your sy
 
 1. **Node.js**: The application is built using Node.js, so you need to have it installed on your machine. You can download the latest version of Node.js from the [official website](https://nodejs.org/).
 
-2. **Amazon AWS Polly API Key**: The voice output feature of the application utilizes Amazon AWS Polly, a text-to-speech service. To use AWS Polly, sign up for an AWS account, and follow the steps to create an IAM user with the required permissions. Once you have your IAM user, set up your AWS credentials in the `.env` file of the application. You can refer to the [official AWS Polly documentation](https://docs.aws.amazon.com/polly/latest/dg/get-started-quick.html) for more information.
+2. **Azure Cognitive Services Text to Speech**: The voice output feature of the application utilizes Azure Cognitive Services Text to Speech, a text-to-speech service. To use Azure Text to Speech, sign up for an Azure account and follow the steps to create a Text to Speech resource. Once you have your resource, obtain the API key from the Azure portal, and set it up in the .env file of the application. You can refer to the official Azure Text to Speech documentation for more information on setting up and obtaining the API key.
 
 3. **OpenAI API Key**: The application requires an OpenAI API key for AI integration (Chat-GPT and Whisper Transcription). Sign up for an OpenAI account and obtain an API key from the [OpenAI Developer Dashboard](https://beta.openai.com/signup/). Once you have your API key, set it up in the `.env` file of the application.
 
@@ -40,9 +40,12 @@ cd Teacher-AI
 # Install dependencies
 npm install
 
-# Add API keys to .env in root folder
-AMAZON_AWS_POLLY_ACCESS_KEY=
-AMAZON_AWS_POLLY_SECRET_KEY=
+# Create file with enviromental variables
+cp .env.exmaple .env
+
+# Add API keys and other variables to .env in root folder
+AZURE_SUBSCRIPTION_KEY=
+AZURE_REGION=
 OPENAI_API_KEY=
 
 # Build app
